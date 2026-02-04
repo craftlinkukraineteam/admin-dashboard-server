@@ -1,0 +1,81 @@
+openapi: 3.0.0
+info:
+  title: Auth Service API
+  version: 1.0.0
+  description: API для авторизації, реєстрації та профілю користувача
+servers:
+  - url: http://localhost:8081/auth
+paths:
+  /register:
+    post:
+      summary: Реєстрація нового користувача
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: Користувач створений
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /login:
+    post:
+      summary: Авторизація користувача
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: JWT токен
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+  /profile:
+    get:
+      summary: Отримати профіль користувача
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          schema:
+            type: string
+          description: Bearer JWT токен
+      responses:
+        '200':
+          description: Дані користувача
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        password:
+          type: string
