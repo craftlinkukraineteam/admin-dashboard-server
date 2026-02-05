@@ -15,9 +15,9 @@
 
 ### API Endpoints:
 ```properties
-  - POST /auth/register
-  - POST /auth/login
-  - GET /auth/profile
+  POST /auth/register
+  POST /auth/login
+  GET /auth/profile
 ```
 ### Запуск
 Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою:
