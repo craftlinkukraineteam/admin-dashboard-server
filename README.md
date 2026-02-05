@@ -21,6 +21,7 @@
 Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою:
 ```properties
 mvn spring-boot:run
+```
 
 ### Налаштування бази даних
 У файлі `application.properties` вказано усі необхідні параметри підключення:
@@ -35,4 +36,4 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.sql.init.mode=always
-
+```
