@@ -22,7 +22,7 @@
 
 ### Структура проєкту
 ```properties
-├── backend/
+├─ backend/
 ├── auth-service/
 ├──── src/main/java/auth/dashboard/server/
 │   ├── AuthServiceApplication.java   # головний клас
