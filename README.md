@@ -18,7 +18,9 @@
   - GET /auth/profile
 
 ### Запуск
-Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою: mvn spring-boot:run
+Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою:
+```properties
+mvn spring-boot:run
 
 ### Налаштування бази даних
 У файлі `application.properties` вказано усі необхідні параметри підключення:
