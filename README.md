@@ -36,8 +36,9 @@
 │   │     └── UserRepository.java       # робота з БД
 │   ├─── src/main/java/auth/dashboard/server/resources/
 │   │      └── static
-│   │          └── docker-compose.yaml  # конфігурація Docket Compose
+│   │          └── swagger.yaml         # конфігурація Swagger / Open API
 │   └── application.properties          # конфігурація проєкту
+│   └── docker-compose.yml              # конфігурація Docker Compose
 └── pom.xml                             # розширення та надлаштування
 ```
 
