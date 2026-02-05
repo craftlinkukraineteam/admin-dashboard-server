@@ -21,24 +21,25 @@
 ```
 
 ### Структура проєкту
+```properties
 ├── backend/
 ├── auth-service/
+├──── src/main/java/auth/dashboard/server/
+│   ├── AuthServiceApplication.java   # головний клас
 │   ├──── controller/
-│   │   └── AuthController.java  # /login, /register
+│   │     └── AuthController.java       # REST ендпоінти
 │   ├──── service/
-│   │   └── AuthService.java
+│   │     └── AuthService.java          # бізнес-логіка
 │   ├──── model/
-│   │   └── User.java
+│   │     └── User.java                 # сутність користувача
 │   ├──── repository/
-│   │   └── UserRepository.java
-│   └── Application.java
-├───── admin-service/
-│   ├───  controller/
-│   │   └── AdminController.java
-│   ├───  service/
-│   │   └── AdminService.java
-│   └── Application.java
-
+│   │     └── UserRepository.java       # робота з БД
+│   ├─── src/main/java/auth/dashboard/server/resources/
+│   │      └── static
+│   │          └── docker-compose.yaml  # конфігурація Docket Compose
+│   └── application.properties          # конфігурація проєкту
+└── pom.xml                             # розширення та надлаштування
+```
 
 ### Запуск
 Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою:
