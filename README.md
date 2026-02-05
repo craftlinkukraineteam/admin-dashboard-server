@@ -19,6 +19,27 @@
   POST /auth/login
   GET /auth/profile
 ```
+
+### Структура проєкту
+├── backend/
+├── auth-service/
+│   ├──── controller/
+│   │   └── AuthController.java  # /login, /register
+│   ├──── service/
+│   │   └── AuthService.java
+│   ├──── model/
+│   │   └── User.java
+│   ├──── repository/
+│   │   └── UserRepository.java
+│   └── Application.java
+├───── admin-service/
+│   ├───  controller/
+│   │   └── AdminController.java
+│   ├───  service/
+│   │   └── AdminService.java
+│   └── Application.java
+
+
 ### Запуск
 Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою:
 ```properties
