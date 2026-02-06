@@ -9,7 +9,8 @@
 - Spring Data JPA;
 - JWT (JSON Web Token);
 - Hibernate;
-- PostgreSQL (локально або через Docker Compose);
+- PostgreSQL;
+- Docker Compose;
 - Swagger UI:
 
 ### Логіка роботи:
