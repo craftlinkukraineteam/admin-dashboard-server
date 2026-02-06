@@ -3,7 +3,7 @@
 Невеликий мікросервіс, який відповідатиме за логіку панелі адміністрування, створений на Spring Boot.  
 Сервіс працює з базою даних PostgreSQL з можливістю підключення як локально, так і віддалено з допомогою Docker Compose; використовує JWT (JSON Web Token) для аутентифікації.
 
-### Стек технологій, що використовується
+### Використовувані технології
 - Java 17+;
 - Maven;
 - Spring Boot;
@@ -13,7 +13,7 @@
 - PostgreSQL (локально або через Docker Compose);
 - Swagger / OpenAPI:
 
-### API Endpoints:
+### Логіка роботи:
 ```properties
   POST /auth/register
   POST /auth/login
@@ -22,34 +22,51 @@
 
 ### Структура проєкту
 ```properties
-├─ backend/
-├── auth-service/
-├──── src/main/java/auth/dashboard/server/
-│   ├── AuthServiceApplication.java   # головний клас
-│   ├──── controller/
-│   │     └── AuthController.java       # REST ендпоінти
-│   ├──── service/
-│   │     └── AuthService.java          # бізнес-логіка
-│   ├──── model/
-│   │     └── User.java                 # сутність користувача
-│   ├──── repository/
-│   │     └── UserRepository.java       # робота з БД
-│   ├─── src/main/java/auth/dashboard/server/resources/
-│   │      └── static
-│   │          └── swagger.yaml         # конфігурація Swagger / Open API
-│   └── application.properties          # конфігурація проєкту
-│   └── docker-compose.yml              # конфігурація Docker Compose
-└── pom.xml                             # розширення та надлаштування
+├── server/
+│   ├── .idea/
+│   ├── .mvn/
+│   └── src/
+│       └── main/
+│           ├── java/
+│               └── admin/dashboard/server/
+│                   ├── config/
+│                       └── OpenApiConfig.java
+│                   ├── controller/
+│                       └── AuthController.java
+│                   ├── model/
+│                       └── User.java
+│                   ├── repository/
+│                       └── UserRepository.java
+│                   ├── service/
+│                       └── AuthService.java
+│                   └── ServerApplication.java
+│           └── resources/
+│               ├── static/
+│                   └── swagger.yaml
+│               ├── templates/
+│               └── application.properties
+│       ├── test/
+│           └── java/
+│               └── admin.dashboard.server/
+│                   └── ServerApplicationTests.java
+│       ├── target/
+│       ├── docker-compose.yml
+│       ├── HELP.md
+│       ├── mvnw
+│       ├── mvnw.cmd
+│       ├── pow.xml
+│       └── .gitignore
+│           └── .gitattributes
 ```
 
 ### Запуск
-Запуск мікросервісу в JetBrains IntelliJ Idea через консоль командою:
+Запуск проєкту в JetBrains IntelliJ Idea через консоль командою:
 ```properties
 mvn spring-boot:run
 ```
 
-### Налаштування бази даних
-У файлі `application.properties` вказано усі необхідні параметри підключення:
+### Налаштування проєкту
+У файлі `application.properties` вказані усі необхідні параметри підключення:
 ```properties
 spring.application.name=server
 server.port=8081
