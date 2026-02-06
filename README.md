@@ -1,4 +1,4 @@
-# Administration Panel Logic Service
+# Administration Panel (Server)
 
 Невеликий мікросервіс, який відповідатиме за логіку панелі адміністрування, створений на Spring Boot.  
 Сервіс працює з базою даних PostgreSQL з можливістю підключення як локально, так і віддалено з допомогою Docker Compose; використовує JWT (JSON Web Token) для аутентифікації.
