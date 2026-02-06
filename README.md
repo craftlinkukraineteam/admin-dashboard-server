@@ -10,13 +10,13 @@
 - JWT (JSON Web Token);
 - Hibernate;
 - PostgreSQL (локально або через Docker Compose);
-- Swagger / OpenAPI:
+- Swagger UI:
 
 ### Логіка роботи:
 ```properties
   POST /auth/register
   POST /auth/login
-  GET /auth/profile
+  GET  /auth/profile
 ```
 
 ### Структура проєкту
