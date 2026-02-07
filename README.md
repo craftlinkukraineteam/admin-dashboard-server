@@ -56,7 +56,7 @@
         ├── mvnw.cmd
         ├── pow.xml
         └── .gitignore
-             └── .gitattributes
+            └── .gitattributes
 ```
 
 ### Запуск
