@@ -65,6 +65,16 @@
 mvn spring-boot:run
 ```
 
+### Оновлення усіх залежностей Maven до останніх версій
+```properties
+mvn versions:use-latest-releases
+```
+
+###  Перевірка усіх наявних оновлень Maven
+```properties
+mvn versions:display-dependency-updates
+```
+
 ### Налаштування проєкту
 У файлі `application.properties` вказані усі необхідні параметри підключення:
 ```properties
